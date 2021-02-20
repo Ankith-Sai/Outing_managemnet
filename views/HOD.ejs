@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HOD_view</title>
+        <link rel = "stylesheet" href = "/CSS_Files/HOD.css">
+    </head>
+    <body>
+        <header>
+            <h2>HOD sir View!!</h2>
+        </header>      
+        <main>
+            <%
+                var count = messages.length;
+                var flag = false;
+                if(count > 0){
+                    %>
+                        <p>The number of Leaves to apporve : <%= count %></p> 
+                    <%
+                } else{
+                    flag = true;
+                    %>
+                        <!-- flag = "true"; -->
+                        <p>There are no leaves yet today !</p> 
+                    <%
+                }
+            %>
+            <%
+            messages.forEach(message => {
+                %> <form action = "/HOD_approval" method = "post">
+                <textarea rows = "7" cols = "60"><%= message.message %></textarea><br>
+                <input type = "text" name = "roll" value = "<%=message.roll %>" id = "roll" readonly>
+                <input type = "submit" value = "approve"><br><br>
+                </form>
+                <%
+            }); 
+            %>
+            <%
+                if(!flag){
+                    %><p>Note: pelase refresh the page after you finish approving the forms </p><%
+                }
+            %>
+        </main>
+    </body>
+</html>

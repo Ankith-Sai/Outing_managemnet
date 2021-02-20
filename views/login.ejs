@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login_outing_page</title>
+        <link rel="stylesheet" href = "./CSS_Files/login.css">
+    </head>
+    <body>
+        <header id = "header">
+            <h1>eLeave LogIn page </h1>
+        </header>
+        <main id = "main">
+            <form action = "/login" target = "_self" method = "post">
+                <div id = "name">
+                    <label for="username">Username:</label>
+                    <input type = "text" id = "username" name  = "username" placeholder = "username">
+                </div><br>
+
+                <div id = "password">
+                    <label for = "password">Password:</label>
+                    <input type = "password" id = "password" name = "password" placeholder = "password">
+                </div><br>
+
+                <div id = "loginAs">
+                    <p>Login As</p>
+                    <select  name = "login" id = "loginAs" required>
+                        <option value = "HOD">HOD</option>
+                        <option value = "Faculty">Faculty</option>
+                        <option value = "student" selected>Student</option>
+                        <option value = "Security" >Security</option>
+                    </select>
+                </div><br>
+
+
+                <div id = "submit">
+                    <a href = "/register">register as student </a> ||
+                    <a href = "/register/faculty">register as a faculty</a> <br><br>
+                    <input type = "submit" id = "login"  value  = "login"><br>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

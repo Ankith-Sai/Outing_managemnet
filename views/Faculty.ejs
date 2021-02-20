@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Faculty_view</title>
+        <link rel = "stylesheet" href = "/CSS_Files/Faculty.css">
+    </head>
+    <body>
+        <header>
+            <h1>Faculty View!!</h1>
+
+            
+                <% 
+                    var count = message.length;
+                    var flag = false;
+                    if(count > 0){
+                        flag = true;
+                    %>
+                        <p>Number of Students Applied for Leave :<%=count %> <p>
+                    <%}else{
+                        %>
+                            <p>There are No leaves yet</p>
+                        <%
+                    }
+
+                    message.forEach(mes => {
+                        %>
+                          <form action = "/approval" method = "post">
+                            <textarea rows="5" cols = "60"><%= mes.message  %></textarea><br>
+                            <input type = "text" name = "roll" id = "roll" value = "<%=mes.roll %>" readonly>
+                           <!-- <a href = "/Reject"> <input type = "button"  value = "Reject" ></a> -->
+                            <input type = "submit" value = "Approve"><br><br>
+                        </form>
+                        <%
+                    })
+                %>
+        </header>
+        <% if(flag){ %>
+        <p>Note: Please Refresh After approving to see the fresh page!!</p>
+        <% } %>
+    </body>
+</html>

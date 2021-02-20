@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>register_student_info</title>
+    <link rel="stylesheet" href="/CSS_Files/register.css">
+    <script src="https://kit.fontawesome.com/d2deca786d.js" crossorigin="anonymous"></script>
+    <!-- <script defer src ="../JAVA_SCRIPT_FILES/registration.js"></script>  -->
+</head>
+
+<body>
+    <header>
+        <h1>
+            Register Student
+        </h1>
+    </header>
+
+    <main>
+        <form  action = "/student/success" onsubmit = "return validate()" method = "post"   id="form">
+            <div class="container">
+                <div class="roll">
+                    <label for="rollNumber">Roll: </label>
+                    <input type="text" id="rollNumber" name="rollNumber" value="177r1a05222"   Placeholder="enter college roll number"
+                        required >
+                    <span id = "roll-error" style = "color: red; font-weight: 600;"></span><br>
+                </div>
+
+                <div class="Name">
+                    <label for="Name">Name: </label>
+                    <input type="text" id="Name" name="Name" placeholder="enter your name"  value  = "Ankith Sai " required>
+                </div>
+
+                <div class="Department">
+                    <label for="Department">Department: </label>
+                    <select id="Department" name = "Dept" required>
+                        <option value="CSE" selected>CSE</option>
+                        <option value="MECH">MECH</option>
+                        <option value="ECE">ECE</option>
+                        <option value="IT">IT</option>
+                        <option value="CIVIL">CIVIL</option>
+                    </select>
+                </div>
+
+                <div class="section">
+                    <label for="section">Section: </label>
+                    <select id="section" name = "sec">
+                        <option value="A" selected>A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+
+                <div class="Email">
+                    <label for="Email">Email: </label>
+                    <input type="text" id="Email" name="Email" placeholder="Email" value = "kh">
+                    <span id = "email-error" style = "color:red"></span><br>
+                </div>
+
+                <div class="Phone">
+                    <label for="Phone">Phone: </label>
+                    <input type="text" id="Phone" name="Phone" placeholder="Phone number" value  = "8897995431"  required>
+                    <span id = "phone-error" style = "color:red"></span><br>
+                </div>
+
+                <div class = "password">
+                    <label for  = "password">Create New Password</label>
+                    <input type = "password" id = "password" name = "password"  value = "ringring" placeholder = "enter new password"  onkeyup="check(this.value)">
+                    <span id = "password-error" style = "color:red"></span><br>
+
+                    <label for = "re-password">Retype the password</label>
+                    <input type = "password" id = re-password name = "re-password" value  = "ringring" placeholder  = "verify password" >
+                    <span id = "retype-error" style= "color: red"></span><br>
+                </div>
+
+                <div class = "pass-rules">  
+                    <label class = "pass"><i class="fas fa-check-circle" id = "tick"></i>enter minimum of 8 characters</label><br>
+                    <label class = "pass"><i class="fas fa-check-circle" id = "tick "></i>enter atleast one UPPER case letter</label><br>
+                    <label class = "pass"><i class="fas fa-check-circle" id = "tick"></i>enter atleast one Numeric Char</label><br>
+                    <label class = "pass"><i class="fas fa-check-circle" id = "tick"></i>enter atlease one special character</label><br>
+                </div>
+
+                <dic class="submit">
+                    <input type="submit" value="Register">
+                </dic>
+            </div>
+        </form>
+    </main>
+
+
+    <script  src ="/JAVA_SCRIPT_FILES/registration.js"></script> 
+    <!-- <main>
+        <form id = "form" method = "post" >
+            <input type = "text" name = "name" id = "name" value = "Ankith">
+        </form>
+    </main>-->
+</body> 
+</html>
+

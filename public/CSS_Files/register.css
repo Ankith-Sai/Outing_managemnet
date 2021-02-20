@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+input,select{
+    background-color: black;
+    color: white;
+}
+
+div.pass-rules{
+    color: rgb(238, 241, 233); 
+    /* border: solid 2px white; */
+    border-radius:5px;
+    margin: 10px 10px 25px 10px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.fas{
+    /* border: solid white 1px; */
+    margin: 0px 4px 0px 0px;
+    color: greenyellow ;
+    visibility: hidden;
+}

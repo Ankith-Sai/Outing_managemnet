@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Faculty_Registeration</title>
+        <link rel = "stylesheet" href = "/CSS_Files/register.css">
+        <script src="https://kit.fontawesome.com/d2deca786d.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>FACULTY REGISTERATION</h1>
+        </header>
+
+        <main>
+            <div Id = "starting_from" class = "starting_form">
+                <form action = "/faculty/success" onsubmit = "return validate()"  method = "post" target = "_self">
+                    <div class = "Name">
+                        <label for = "Name">Name: </label>
+                        <input type = "text" id = "Name" name = "Name" placeholder = "name" value = "Suboth" >
+                    </div>
+
+                    <div class = "Email">
+                        <label for = "Email">Email: </label>
+                        <input type = "text" id = "Email" name = "Email" placeholder = "Email" value = "subbu@gmail.com"><br>
+                        <span id = "EmailError" style = "color:rgb(230, 121, 126)"></span>
+                    </div>
+
+                    <div class = "Dept">
+                        <label for = "Dept">Department: </label>
+                        <select name  = "dept" id = "Dept" required>
+                            <option value = "CSE" selected></option>
+                            <option value = "Mech"></option>
+                            <option value = "ECE"></option>
+                            <option value = "IT"></option>
+                            <option value = "CIVIL"></option>
+                        </select>
+                    </div>
+
+                    <div class = "Phone">
+                        <label for = "Phone">Phone: </label>
+                        <input type = "text" id = "Phone" name = "Phone" placeholder = "Phone"  value = "9998889932" required>
+                        <spam id ="PhoneError" style = "color:rgb(230, 121, 126)"></spam>
+                    </div>
+
+                    <div class = "Password">
+                        <label for = "password">Create a new Password</label>
+                        <input type = "password" id=  "Password" name ="password" placeholder = "create new password"  onkeyup = "check(this.value)">
+                        <span id = "PasswordError" style = "color:rgb(230, 121, 126)"></span><br>
+
+                        <label for = "ReType">Re-type the password</label>
+                        <input type = "password" id = "ReType" name = "ReType" placeholder = "enter hte password again " >
+                        <span id = "RetypeError" style = "color:rgb(230, 121, 126)"></span> 
+                    </div>
+
+                    <div class = "passwordIssue">
+                        <label class = "pass"><i class="fas fa-check-circle"></i>enter 8 chars minimum</label><br>
+                        <label class = "pass"><i class="fas fa-check-circle"></i>enter atleast one upper case</label><br>
+                        <label class = "pass"><i class="fas fa-check-circle"></i>enter atleast Numeric</label><br>
+                        <label class = "pass"><i class="fas fa-check-circle"></i>enter atleast one special char</label><br><br>
+                    </div>
+
+                    <div class = "Submit">
+                        <input type = "submit" value = "register">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <script src ="/JAVA_SCRIPT_FILES/faculty_validation.js"></script>
+    </body>
+    
+</html>

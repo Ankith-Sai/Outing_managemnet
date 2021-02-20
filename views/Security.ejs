@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Securtiy View
+        </title>
+    </head>
+    <body>
+        <header>
+            <h2>Please Verify with the student!!</h2>
+        </header>
+        <main>
+            <%
+                var count = messages.length;
+                %>
+                    <p>The number of leaves are : <%= count %></p>
+                <%
+            %>
+            <% 
+                messages.forEach(message => {
+                    %>
+                       <textarea rows="2" cols="12"><%= message.roll %></textarea> <br>
+                    <%
+                });
+            %>
+        </main>
+    </body>
+</html>

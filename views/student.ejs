@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>student_leave</title>
+        <link rel = "stylesheet" href = "/CSS_Files/Letter.css">
+    </head>
+    <body>
+        <header>
+            <h1>Enter the purpose of your leave !!</h1>
+        </header>
+        <form action = "/login/submitted" method = "POST">
+
+            <label for = "ID"></label>
+            <input type = "text" name = "ID" value = "<%=roll %>"  id = "ID" readonly><br>
+
+            <label for = "dept"></label>
+            <input type  = "text" name = "dept" value = "<%=Dept %>" id = "dept" readonly><br>
+
+            <label for = "sec"></label>
+            <input type = "text" name = "sec" value = "<%=Sec %>" id = "sec" readonly><br><br>
+
+            <label for = "letter">Message:</label><br>
+            <textarea rows = "10" cols = "60" name = "message"></textarea>
+            <input type = "submit" value = "Submit Letter">
+        </form>
+    </body>
+</html>
